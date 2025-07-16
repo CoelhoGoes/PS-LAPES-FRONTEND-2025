@@ -1,20 +1,37 @@
-import { Routes, Route } from 'react-router-dom';
-import { Teste } from './pages/teste';
-import Login from './pages/Login';
-import { Home } from './pages/Home';
-import MenuPage from './pages/MenuPage';
-import DishDetailPage from './pages/DishDetailPage';
-import Register from './pages/Register';
+// src/Router.tsx
+import { Routes, Route } from 'react-router-dom'
+import { Teste } from './pages/teste'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import { Home } from './pages/Home'
+import MenuPage from './pages/MenuPage'
+import DishDetailPage from './pages/DishDetailPage'
+import AdminCategoriesPage from './pages/AdminCategoriesPage'
+import AdminDishesPage from './pages/AdminDishesPage'
+
+import PrivateRoute from './routes/PrivateRoute'
+import AdminRoute from './routes/AdminRoute'
 
 export function Router() {
   return (
     <Routes>
-      <Route path="/home" element={<Home />} />
+      {/* Rotas públicas */}
       <Route path="/" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/teste" element={<Teste />} />
-      <Route path="/menu" element={<MenuPage />} />
-      <Route path="/dish/:id" element={<DishDetailPage />} />
+
+      {/* Rotas privadas para usuários autenticados/com login */}
+      <Route element={<PrivateRoute />}>
+        <Route path="/home" element={<Home />} />
+        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/dish/:id" element={<DishDetailPage />} />
+      </Route>
+
+      {/* Rotas para adm */}
+      <Route element={<AdminRoute />}>
+        <Route path="/admin/categories" element={<AdminCategoriesPage />} />
+        <Route path="/admin/dishes" element={<AdminDishesPage />} />
+      </Route>
     </Routes>
-  );
+  )
 }

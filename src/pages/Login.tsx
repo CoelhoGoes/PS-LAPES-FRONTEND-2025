@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useContext } from "react";
-import AuthContext, { AuthContextType } from "../Context/AuthProvider";
+import AuthContext, { AuthContextType } from "../context/AuthProvider";
 import axios from '../services/api';
 import { AxiosError } from "axios";
 
