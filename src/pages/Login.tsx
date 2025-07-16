@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect, useContext } from "react";
 import AuthContext, { AuthContextType } from "../Context/AuthProvider";
-import axios from '../Api/Axios';
+import axios from '../services/api';
 import { AxiosError } from "axios";
 
 const LOGIN_URL = '/auth';
@@ -97,7 +97,7 @@ const Login = () => {
             <button type="submit">Entrar</button>
           </form>
           <p>
-            Não tem uma conta? <a href="/registro">Registrar</a>
+            Não tem uma conta? <a href="/register">Registrar</a>
           </p>
         </section>
       )}
