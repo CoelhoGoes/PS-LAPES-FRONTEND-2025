@@ -2,7 +2,9 @@ import { createContext, useState, useEffect, ReactNode } from 'react'
 import api from '../services/api'
 
 type User = {
+    id: string
     email: string
+    name: string
     role: 'admin' | 'client'
 }
 

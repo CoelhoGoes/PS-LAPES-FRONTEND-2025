@@ -101,7 +101,13 @@ const Registro = () => {
                 </section>
             ) : (
                 <section>
-                    <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+                    <p
+                        ref={errRef}
+                        className={`space-y-4 max-w-md mx-auto ${errMsg ? "errmsg" : "offscreen"}`}
+                        aria-live="assertive"
+                    >
+                        {errMsg}
+                    </p>
                     <h1>Registro</h1>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="username"> Nome de Usuário:
@@ -112,7 +118,7 @@ const Registro = () => {
                                 <FontAwesomeIcon icon={faTimes} />
                             </span>
                         </label>
-                        <input
+                        <input className="border border-gray-300 rounded px-4 py-2 w-full" placeholder="Nome"
                             type="text"
                             id="username"
                             ref={userRef}
@@ -139,7 +145,7 @@ const Registro = () => {
                                 <FontAwesomeIcon icon={faTimes} />
                             </span>
                         </label>
-                        <input
+                        <input className="border border-gray-300 rounded px-4 py-2 w-full" placeholder="Senha"
                             type="password"
                             id="password"
                             onChange={(e) => setPwd(e.target.value)}
@@ -165,7 +171,7 @@ const Registro = () => {
                                 <FontAwesomeIcon icon={faTimes} />
                             </span>
                         </label>
-                        <input
+                        <input className="border border-gray-300 rounded px-4 py-2 w-full" placeholder="Confirmar Senha"
                             type="password"
                             id="confirm_pwd"
                             onChange={(e) => setMatchPwd(e.target.value)}
@@ -180,7 +186,7 @@ const Registro = () => {
                             A senha digitada deve ser igual à senha anterior.
                         </p>
 
-                        <button disabled={!validName || !validPwd || !validMatch ? true : false}>Registrar</button>
+                        <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded shadow" disabled={!validName || !validPwd || !validMatch ? true : false}>Registrar</button>
                     </form>
                     <p>Já possui uma conta? <Link to="/login">Faça login</Link></p>
                 </section>

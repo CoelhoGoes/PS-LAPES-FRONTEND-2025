@@ -22,10 +22,13 @@ export default function MenuPage() {
                 ])
                 setCategories(catRes.data)
                 setDishes(dishRes.data)
-            } catch (err) {
-                setError('Erro ao carregar cardápio.')
-            } finally {
-                setIsLoading(false)
+            } catch (err: any) {
+                console.error(err)
+                if (err.response?.status === 401) {
+                    setError('Sessão expirada. Faça login novamente.')
+                } else {
+                    setError('Erro ao carregar cardápio.')
+                }
             }
         }
         fetchData()

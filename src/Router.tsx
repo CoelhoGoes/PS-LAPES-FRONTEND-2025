@@ -1,13 +1,17 @@
 // src/Router.tsx
 import { Routes, Route } from 'react-router-dom'
+
 import { Teste } from './pages/teste'
 import Login from './pages/Login'
 import Register from './pages/Register'
+
 import { Home } from './pages/Home'
 import MenuPage from './pages/MenuPage'
 import DishDetailPage from './pages/DishDetailPage'
+
 import AdminCategoriesPage from './pages/AdminCategoriesPage'
 import AdminDishesPage from './pages/AdminDishesPage'
+import NewDishPage from './pages/NewDishPage'
 
 import PrivateRoute from './routes/PrivateRoute'
 import AdminRoute from './routes/AdminRoute'
@@ -31,6 +35,8 @@ export function Router() {
       <Route element={<AdminRoute />}>
         <Route path="/admin/categories" element={<AdminCategoriesPage />} />
         <Route path="/admin/dishes" element={<AdminDishesPage />} />
+        <Route path="/admin/new-dish" element={<NewDishPage />} />
+
       </Route>
     </Routes>
   )
