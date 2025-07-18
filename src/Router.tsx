@@ -8,6 +8,7 @@ import Register from './pages/Register'
 import { Home } from './pages/Home'
 import MenuPage from './pages/MenuPage'
 import DishDetailPage from './pages/DishDetailPage'
+import CartPage from './pages/CartPage'
 
 import AdminCategoriesPage from './pages/AdminCategoriesPage'
 import AdminDishesPage from './pages/AdminDishesPage'
@@ -29,6 +30,7 @@ export function Router() {
         <Route path="/home" element={<Home />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/dish/:id" element={<DishDetailPage />} />
+        <Route path="/cart" element={<CartPage />} />
       </Route>
 
       {/* Rotas para adm */}

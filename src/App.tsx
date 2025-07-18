@@ -1,13 +1,16 @@
 import { BrowserRouter } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import { Router } from './Router'
+import { CartProvider } from './context/CartContext'
 
 export default function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </CartProvider>
     </AuthProvider>
   )
 }
