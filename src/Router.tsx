@@ -9,6 +9,8 @@ import { Home } from './pages/Home'
 import MenuPage from './pages/MenuPage'
 import DishDetailPage from './pages/DishDetailPage'
 import CartPage from './pages/CartPage'
+import CheckoutPage from './pages/CheckoutPage'
+import OrdersPage from './pages/OrderPage'
 
 import AdminCategoriesPage from './pages/AdminCategoriesPage'
 import AdminDishesPage from './pages/AdminDishesPage'
@@ -31,6 +33,8 @@ export function Router() {
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/dish/:id" element={<DishDetailPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
       </Route>
 
       {/* Rotas para adm */}
