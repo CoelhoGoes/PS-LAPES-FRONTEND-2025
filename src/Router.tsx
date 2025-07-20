@@ -15,6 +15,8 @@ import OrdersPage from './pages/OrderPage'
 import AdminCategoriesPage from './pages/AdminCategoriesPage'
 import AdminDishesPage from './pages/AdminDishesPage'
 import NewDishPage from './pages/NewDishPage'
+import AdminOrdersPage from './pages/AdminOrdersPage'
+import AdminUsersPage from './pages/AdminUsersPage'
 
 import PrivateRoute from './routes/PrivateRoute'
 import AdminRoute from './routes/AdminRoute'
@@ -42,7 +44,8 @@ export function Router() {
         <Route path="/admin/categories" element={<AdminCategoriesPage />} />
         <Route path="/admin/dishes" element={<AdminDishesPage />} />
         <Route path="/admin/new-dish" element={<NewDishPage />} />
-
+        <Route path="/admin/orders" element={<AdminOrdersPage />} />
+        <Route path="/admin/users" element={<AdminUsersPage />} />
       </Route>
     </Routes>
   )
