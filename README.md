@@ -111,24 +111,6 @@ A tela **AdminReportsPage** exibe:
 
 ---
 
-## ⭐ Funcionalidades extras (opcionais)
-
-* Persistência do carrinho no localStorage
-* Quantidade de itens no carrinho na Navbar
-* Dashboard admin mais completo (últimos pedidos, KPIs diários)
-* Tema claro/escuro (dark mode)
-* Login social (Google, GitHub)
-* Testes automatizados (unitários e e2e)
-
----
-
-## 📌 Status do projeto
-
-✅ Funcionalidades obrigatórias: **100% concluídas**
-⚙️ Preparado para deploy (Vercel, Netlify, etc.)
-
----
-
 ## 📄 Licença
 
 MIT
